@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		#tanchuceng{
+			width: 500px;
+			height: 500px;
+			border: 1px solid black;
+			position: fixed;
+			background: white;
+			top: 50%;
+			left:50%;
+			margin: -250px 0 0 -250px;
+			display: none;
+		}
+		#tanchuceng a{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			width: 40px;
+			height: 40px;
+			border: 1px solid black;
+			border-radius: 50%;
+			line-height: 40px;
+			text-align: center;
+			text-decoration: none;
+		}
+		#tuichu{
+			cursor: pointer;
+		}
+		#tanchuceng input{
+			outline: none;
+			border: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="all">
+		<div class="header">
+			<ul>
+				<li class="bt">
+					<h1>学生成绩管理系统</h1>
+				</li>
+			</ul>
+		</div>
+		<div class="nav">
+			<ul class="nav1" id="ul1">
+
+				
+				<li class="right" index="0" style="background: #85cdc9"><img src="../img/index.png">首页</li>
+				
+				<li class="right" index="1"><img src="../img/class.png">班级管理</li>
+				
+				<li class="right" index="2"><img src="../img/student.png">学生管理</li>
+				
+				<li class="right" index="3"><img src="../img/4.png">课程管理</li>
+				
+				<li class="right" index="4"><img src="../img/index.png">成绩管理</li>
+			</ul>
+
+			<div class="msg" id="msg" style="cursor: pointer;">
+				<div class="pic">
+					<img src="../img/manager.jpg" style="position: absolute;
+					width: 100px;height: 100px;top: 340px;left: 150px;">
+				</div>
+				<h6 style="color: black;text-align: center;position: absolute;
+					width: 100px;height: 100px;top: 440px;left: 150px;" id="uName">管理员</h6>
+			</div>
+			<div class="tc" style="position: absolute;
+					width: 50px;height: 50px;top: 460px;left: 170px;">
+				<img src="../img/quit.png" class="btn" id="tuichu">
+				<h6>退出登录</h6>
+			</div>
+
+
+		</div>
+		
+		
+			<iframe src="shouye.html" id="aaa" width="960" height="510" scrolling="no"></iframe>
+		
+		
+		<script type="text/javascript">
+			var ul1 = document.getElementById('ul1');
+			var ifr = document.getElementById('aaa');
+			var list = ul1.getElementsByTagName('li');
+			//获取 ul1下面所有的li标签 list 成为一个 类数组
+
+			var i = 0;//3 
+			ul1.onclick = function(event){
+				var target = event.target;
+				//event 他是 事件的对象 为事件提供一些内置的方法 
+				//event.clientX
+				if(target.nodeName == "LI"){
+					list[i].style.background = "white";
+					var index = target.getAttribute('index');
+					i = index;
+					target.style.background = "#85cdc9";
+					if(index == 1){
+						ifr.src = "class.html"
+					}
+					else if(index == 0){
+						ifr.src = "shouye.html"
+					}
+					else if (index == 2){
+					    ifr.src = "stuManage.html"
+					}
+					else if (index == 3){
+                        ifr.src = "course.html"
+					}
+					else if (index == 4){
+                        ifr.src = "TeacherYe1.html"
+					}
+
+				}
+			}
+	</script>
+
+	</div>
+	<div class="footer">
+		<ul>
+			<li class="bt1">
+				<h3>Copyright © 2017 Student performance management system. All rights reserved.</h3>
+			</li>
+		</ul>
+	</div>
+	</div>
+
+
+
+
+	</div>
+	<div id="tanchuceng" class="form-group">
+		<a href="javascript:;" id="non">×</a>
+		姓名:<input type="text" name="" id="namer"  style="border: none;outline: none;"><br>
+		年龄:<input type="text" name="" id="ager"><br>
+		性别:<input type="text" name="" id="sexr"><br>
+
+		<input type="button" name="" value="修改" id="update">
+	</div>
+
+	<script type="text/javascript">
+        var mid = localStorage.getItem('mid');
+        var msg = document.getElementById('msg');
+        var ager = document.getElementById('ager');
+        var namer = document.getElementById('namer');
+        var sexr = document.getElementById('sexr');
+        var tanchuceng = document.getElementById('tanchuceng');
+        var non = document.getElementById('non');
+        var tuichu = document.getElementById('tuichu');
+        var update = document.getElementById('update');
+        var uName = document.getElementById('uName');
+        uName.innerHTML = localStorage.getItem('name');
+        msg.onclick = function(){
+            namer.value = localStorage.getItem('name');
+            sexr.value = localStorage.getItem('sex');
+            ager.value = localStorage.getItem('age');
+            tanchuceng.style.display = 'block';
+        }
+        non.onclick = function(){
+            tanchuceng.style.display = 'none'
+        }
+        tuichu.onclick = function(){
+            localStorage.clear();
+            window.location = '../login.html';
+        }
+        update.onclick = function () {
+            var arrJson = {
+                mid:mid,
+                userName:namer.value,
+                userSex:sexr.value,
+                userAge:ager.value
+            }
+            $.ajax({
+                url:'/updateInfo',
+                type:'POST',
+                data:arrJson,
+                success:function (data) {
+                    localStorage.setItem('name',data.message.userName);
+                    localStorage.setItem('age',data.message.userAge);
+                    localStorage.setItem('sex',data.message.userSex);
+                    uName.innerHTML = localStorage.getItem('name');
+                    alert('修改成功')
+                },
+                error:function () {
+
+                }
+            })
+        }
+
+
+	</script>
+	
+</body>
+</html>

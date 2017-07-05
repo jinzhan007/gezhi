@@ -1,0 +1,165 @@
+.mTable{
+	width: 950px;
+	height: 360px;
+	margin: 60px 5px 30px;
+}
+
+.edText{
+	width: 142px;
+	height: 26px;
+	border: 1px solid black;
+	margin-left: 70px;
+	margin-top: 12px;
+}
+
+.btnSrch{
+	width: 80px;
+	height: 28px;
+	margin-left: 12px;
+}
+
+.eText{
+	width: 142px;
+	height: 26px;
+	border: 1px solid black;
+	margin-left: 10px;
+	float: left;
+}
+
+.word{
+	margin-left: 45px;
+}
+
+.word p{
+	float: left;
+	margin-top: 8px;
+	font-size: 12px;
+}
+
+.search div{
+	margin-top: 12px;
+	float: left;
+}
+
+.tableHeader{
+	height: 40px;
+	list-style: none;
+	background: #509490;
+}
+
+.tableContent{
+	height: 320px;
+}
+
+.tbContentS{
+	height: 32px;
+	background-color: #ffffff;
+}
+
+.tbContentS .checkBox{
+	margin-top: 9px;
+}
+
+.tbContentD{
+	height: 32px;
+	background-color: #bbd6d4;
+}
+
+.tbContentD .checkBox{
+	margin-top: 9px;
+}
+
+.tableContent input{
+	margin-top: 10px;
+	margin-left: 18px;
+	float: left;
+}
+
+.tableHeader input{
+	margin-top:15px;
+	margin-left: 18px;
+	float: left;
+}
+
+.search input{
+	float: left;
+}
+
+.entry p{
+	font-size: 12px;
+	color: white;
+	margin-left: 70px;
+}
+.entry .checkAll{
+	margin-left: 0px;
+}
+
+.entry{
+	float: left;
+}
+
+.tableHeader li{
+	margin-top: 12px;
+}
+
+.btnOption,.btnOptionAll{
+	float: right;
+
+	margin-top: 7px;
+}
+
+.btnOptionAll{
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+}
+
+.btnOption{
+	width: 16px;
+	height: 16px;
+	margin-right: 16px;
+}
+
+.pages li{
+	width: 24px;
+	height: 20px;
+	margin:5px 0 5px 1px;
+	background: white;
+	float: right;
+}
+
+#stuAlter{
+	width: 300px;
+	height: 300px;
+	border: 1px solid #509490;
+	position: fixed;
+	background: white;
+	top: 50%;
+	left:50%;
+	margin: -250px 0 0 -250px;
+	text-align: center;
+	display: none;
+}
+
+#stuAlter a{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	line-height: 20px;
+	background: #50a074;
+	text-align: center;
+	text-decoration: none;
+}
+
+.btnSure{
+	width: 50px;
+	height: 30px;
+	background: #50a074;
+	color:white;
+	margin-top: 10px;
+	margin-left: 20px;
+}

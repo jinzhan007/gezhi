@@ -1,0 +1,15 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.content{
+	width: 960px;
+	height: 450px;
+	float: left;
+	margin: 11px 0 0 8px;
+	background: #f3f3f3;
+}
+
+ul{
+	list-style: none;
+}

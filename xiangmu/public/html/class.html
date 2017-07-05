@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/xg.css">
+</head>
+
+<body>
+	<div class="content">
+			<div class="search">
+				<input type="text" name="classMessage" class="classMessage">
+					
+				</input>
+				<div class="s_pic">
+					<input type="button" class="classPic" value="搜索"></input>
+				</div>
+				
+					<p>筛选：</p>
+					<div class="s_list">
+					<select class="s1">
+						<option>计算机学院</option>
+						<option>大气学院</option>
+						<option>外国语学院</option>
+						<option>通信工程学院</option>
+						<option>信息安全学院</option>
+						<option>物流学院</option>
+					</select>
+
+						<div class="s1">
+							<select>
+								<option>计算机科学</option>
+								<option>气象</option>
+								<option>外语</option>
+								<option>通信工程</option>
+								<option>信息安全</option>
+								<option>物流</option>
+							</select>
+						</div>
+						<div class="s2">
+							<select>
+								<option>大一</option>
+								<option>大二</option>
+								<option>大三</option>
+								<option>大四</option>
+								
+							</select>
+						</div>
+				</div>
+
+			</div>
+
+			<div class="xg" id="revise">
+				<a href="javascript:;" id="guan">x</a>
+				<p>学院：</p><input type="text" name="" id=""></input>
+				<p>学院：</p><input type="text" name="" id=""></input>
+				<p>学院：</p><input type="text" name="" id=""></input>
+				<p>学院：</p><input type="text" name="" id=""></input>
+
+			</div>
+			
+			
+			<div class="data">
+				<ul class="th">
+					<li class="checkbox1"><input type="checkbox">全选</input></li>
+					<li>学院</li>
+					<li>专业</li>
+					<li>年级</li>
+					<li>班级</li>
+					<li>操作</li>
+				</ul>
+				<ul>
+					<li class="checkbox2"><input type="checkbox"></input></li>
+					<li>计算机学院</li>
+					<li>计算机科学</li>
+					<li>大二</li>
+					<li>1班</li>
+					<li>
+						<a href=""><img src="../img/delete.png" /></a>
+						<a href="javascript:;" id="xg"><img src="../img/xg.png" /></a>
+						<a href="detail.html"><img src="../img/f.png" /></a>
+					</li>
+				</ul>
+				<ul style="background-color: ">
+					<li class="checkbox2"><input type="checkbox"></input></li>
+					<li>计算机学院</li>
+					<li>计算机科学</li>
+					<li>大二</li>
+					<li>2班</li>
+					<li>
+						<a href=""><img src="../img/delete.png" /></a>
+						<a href="" id="xg"><img src="../img/xg.png" /></a>
+						<a href="detail.html"><img src="../img/f.png" /></a>
+					</li>
+				</ul>
+				<ul>
+					<li class="checkbox2"><input type="checkbox"></input></li>
+					<li>大气学院</li>
+					<li>气象</li>
+					<li>大一</li>
+					<li>1班</li>
+					<li>
+						<a href=""><img src="../img/delete.png" /></a>
+						<a href="" id="xg"><img src="../img/xg.png" /></a>
+						<a href="detail.html"><img src="../img/f.png" /></a>
+					</li>
+				</ul>
+				<ul style="background-color: ">
+					<li class="checkbox2"><input type="checkbox"></input></li>
+					<li>物流学院</li>
+					<li>物流</li>
+					<li>大二</li>
+					<li>1班</li>
+					<li>
+						<a href=""><img src="../img/delete.png" /></a>
+						<a href="" id="xg"><img src="../img/xg.png" /></a>
+						<a href="detail.html"><img src="../img/f.png" /></a>
+					</li>
+				</ul>
+				<ul>
+					<li class="checkbox2"><input type="checkbox"></input></li>
+					<li>外国语学院</li>
+					<li>外语</li>
+					<li>大三</li>
+					<li>1班</li>
+					<li>
+						<a href=""><img src="../img/delete.png" /></a>
+						<a href="" id="xg"><img src="../img/xg.png" /></a>
+						<a href="detail.html"><img src="../img/f.png" /></a>
+					</li>
+				</ul>	
+				<ul style="background-color: ">
+					<li class="checkbox2"><input type="checkbox"></input></li>
+					<li>通信工程学院</li>
+					<li>通信工程</li>
+					<li>大二</li>
+					<li>2班</li>
+					<li>
+						<a href=""><img src="../img/delete.png" /></a>
+						<a href=""><img src="../img/xg.png" /></a>
+						<a href="detail.html"><img src="../img/f.png" /></a>
+					</li>
+				</ul>
+				<ul>
+					<li class="checkbox2"><input type="checkbox"></input></li>
+					<li>外国语学院</li>
+					<li>外语</li>
+					<li>大三</li>
+					<li>1班</li>
+					<li>
+						<a href=""><img src="../img/delete.png" /></a>
+						<a href=""><img src="../img/xg.png" /></a>
+						<a href="detail.html"><img src="../img/f.png" /></a>
+					</li>
+				</ul>
+					<div class="add">
+						<a href=""><img src="../img/add.png"></a>&nbsp;&nbsp;
+						<a href=""><img src="../img/det.png"></a>
+					</div>
+			</div>
+
+			
+			<script type="text/javascript">
+				var xg = document.getElementById('xg');
+				var revise = document.getElementById('revise');
+				var x = document.getElementById('guan');
+				xg.onclick = function(){
+					revise.style.display = "block";
+				}
+				x.onclick = function(){
+					revise.style.display = "none";
+				}
+			</script>
+			<div class="fenye">
+				<a href=""><</a>
+				<a href="" class="">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">></a>
+			</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <input type="text" id="userName" placeholder="用户名">
+    <input type="text" id="passWord" placeholder="密码">
+    <input type="text" id="userAge" placeholder="年龄">
+    <input type="text" id="userSex" placeholder="性别">
+    <input type="button" value="注册" id="btn">
+    <script type="text/javascript">
+        var btn = document.getElementById('btn');
+        var userName = document.getElementById('userName');
+        var passWord = document.getElementById('passWord');
+        var userAge = document.getElementById('userAge');
+        var userSex = document.getElementById('userSex');
+        btn.onclick = function () {
+            var arrJson ={
+                userName:userName.value,
+                passWord:passWord.value,
+                userAge:userAge.value,
+                userSex:userSex.value
+            }
+            $.ajax({
+                url:'/register',
+                type:'POST',
+                data:arrJson,
+                success:function (data) {
+                    if(data.message.code == 100){
+                        alert('注册成功');
+                        //reset.click();
+                        window.location = 'login.html'
+                    }
+                    else if (data.message.code == 103){
+                        alert('账户已存在');
+                   }
+                    else{
+                        alert('注册失败');
+                    }
+                },
+                error:function () {
+                    
+                }
+            })
+        }
+    </script>
+</body>
+</html>

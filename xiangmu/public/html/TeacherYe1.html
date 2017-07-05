@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>学生成绩管理系统</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #zong{
+            width: 1200px;
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color:white;
+        }
+        #header{
+            width: 1129px;
+            height: 42px;
+            line-height: 42px;
+            background-color: #555555;
+        }
+        .main{
+            width: 1129px;
+            height: 449px;
+        }
+        .sideBar{
+            width: 143px;
+            height: 445px;
+            margin-top:15px ;
+            margin-right: 23px;
+            background-color: #efefee;
+            float: left;
+            border: 0.5px solid #DCDBDE;
+        }
+        #menu{
+            width:143px;
+            height: 41px;
+            background-color: #78c5c1;
+        }
+        #menu1{
+            width:143px;
+            height: 50px;
+            background-color: #78c5c1;
+        }
+        .tubiao1{
+            width: 45px;
+            height: 41px;
+            float: left;
+            border: 1px solid #DCDBDE;
+            background-image: url("img/shouye.png");
+            background-repeat: no-repeat;
+            background-position: 16px,20px;
+        }
+        .tubiao2{
+            width: 45px;
+            height: 41px;
+            float: left;
+            border: 1px solid #DCDBDE;
+        }
+        .tubiao3{
+            width: 45px;
+            height: 41px;
+            float: left;
+            border: 1px solid #DCDBDE;
+        }
+        .tubiao4{
+            width: 45px;
+            height: 41px;
+            float: left;
+            border: 1px solid #DCDBDE;
+        }
+        .tubiao5{
+            width: 45px;
+            height: 41px;
+            float: left;
+            border: 1px solid #DCDBDE;
+        }
+        .wenzi{
+            width: 94px;
+            height: 41px;
+            line-height: 41px;
+            float: left;
+            font-family: 微软雅黑;
+            font-size: 18px;
+            color: white;
+            border: 1px solid #DCDBDE;
+        }
+        .wenzi1{
+            width: 94px;
+            height: 41px;
+            line-height: 41px;
+            float: left;
+            font-family: 微软雅黑;
+            font-size: 18px;
+            color: white;
+            border: 1px solid #DCDBDE;
+        }
+        #content{
+            width: 960px;
+            height: 449px;
+            margin-top:15px ;
+            background-color: #EFE6E1;
+            float: left;
+        }
+        #nav{
+            width: 900px;
+            height: 38px;
+            margin-top: 14px;
+            margin-left: 29px;
+            border: 1px solid #DCDBDE
+        }
+        input{
+            margin-right: 22px;
+            margin-top: 10px;
+            -moz-box-shadow: inset 0 0 10px #CCC;
+            -webkit-box-shadow: inset 0 0 10px #CCC;
+            box-shadow: inset 0 0 10px #CCC;
+        }
+        input[type="text"]
+        {
+            background-color: white;
+        }
+        #footer{
+            width: 1129px;
+            height: 49px;
+            margin-top: 23px;
+            border: 1px solid #DCDBDE
+        }
+        .sousuolan{
+            width: 900px;
+            margin-top: 30px;
+            margin-left: 30px;
+            padding: 0px;
+            display:inline;
+        }
+        #btn {
+            width: 80px;;
+            height: 29px;
+            margin-top: 20px;
+            background-color: #49B97D;
+        }
+        .daohang2{
+           width: 958px;
+            height: 36px;
+            margin-top: 30px;
+            background-color: rgba(117, 131, 242, 0.25);
+            border: 1px solid rgba(117, 131, 242, 0.25);
+        }
+        .conten1{
+            width: 958px;
+            height: 38px;
+            margin-bottom: 1px;
+            background-color: white;
+            border: solid darkgray;
+            border-left: 1px;
+            border-top: 0.5px;
+            border-bottom: 0.5px;
+            border-right: 1px;
+        }
+        ul{
+            width: 960px;
+            height: 38px;
+
+        }
+        li{
+             list-style: none;
+             /*清楚列表中的序号*/
+             color: #07010A;
+             text-align: center;
+             line-height: 38px;
+             margin-right:5px;
+         }
+        *{
+            margin: 0;
+            padding: 0;
+            /*文档当中 所有的元素都会执行*/
+        }
+        #li1{
+            width: 140px;
+            height: 38px;
+            line-height: 38px;
+            float: left;
+            display: inline;
+        }
+        #li2{
+            width: 180px;
+            height: 38px;
+            line-height: 38px;
+            float:left;
+            display: inline;
+        }
+        #li3{
+            width: 120px;
+            height: 38px;
+            float: left;
+            display: inline;
+        }
+        #li4{
+            width: 110px;
+            height: 38px;
+            float: left;
+            display: inline;
+        }
+        #li5{
+            width: 70px;
+            height: 38px;
+            float: left;
+            display: inline;
+        }
+        #li6{
+            width: 70px;
+            height: 38px;
+            float: left;
+            display: inline;
+        }
+        #li7{
+            width: 100px;
+            height: 38px;
+            float: left;
+            display: inline;
+        }
+        #li8{
+            width: 130px;
+            height: 38px;
+            line-height: 38px;
+            float: left;
+            display: inline;
+        }
+        #btn1{
+            width: 30px;
+            height: 30px;
+            margin-top: 3px;
+            line-height: 30px;
+            background-size: 100% 100%;
+        }
+        #btn2{
+            width: 30px;
+            height: 30px;
+            margin-top: 3px;
+            background-size: 100% 100%;
+        }
+        #btn3{
+            width: 30px;
+            height: 30px;
+            margin-top: 3px;
+            background-size: 100% 100%;
+        }
+        .page{
+            text-align: center;
+            margin-top: 10px;
+            margin-right: 5px;
+            float: right;
+        }
+        .page>a{
+            text-decoration: none;
+            border:1px solid #f9d52b;
+            padding: 5px 7px;
+            color: #767675;
+            cursor: pointer;
+        }
+        .page a:hover,.page span:hover{
+            color: rgba(37, 136, 139, 0.2);  }
+
+        /*交集选择器中的  子元素选择器
+		ul>li{
+			子元素选择器 是 该元素下直接的子元素 后代元素不会 收到影响
+		}
+</style>
+</head>
+<body>
+
+
+    <div id="content">
+        <div class="sousuolan">
+            <input type="text" name="搜索" size="15" style="width: 140px ;height:25px">
+            <button id="btn" value="搜索" >搜索</button>
+            <span style="margin-left: 47px;">筛选：</span>
+            <select style="margin-left:18px;width: 150px ;font-size:16px;height : 25px;padding: 0 0 0 30px;">
+                <option value="1">计科应用</option>
+                <option value="2"selected>计科工程</option>
+                <option value="3">数媒</option>
+                </select>
+            <select style="margin-left:32px;width: 150px ;font-size:16px;height: 25px;padding: 0 0 0 30px;">
+                <option value="1">HTML</option>
+                <option value="2"selected>JAVA</option>
+                <option value="3">JSp</option>
+                </select>
+            <select  style="margin-left:32px;width: 150px ;font-size:16px;height: 30px;padding: 0 0 0 30px;">
+                <option  value="1">计科应用</option>
+                <option value="2"selected>计科工程</option>
+                <option value="3">数媒</option>
+            </select>
+        </div>
+        <div class="daohang2">
+            <ul class="ul">
+                <li id="li1">班级</li>
+                <li id="li2">课程</li>
+                <li id="li3">任课老师</li>
+                <li id="li4">学号</li>
+                <li id="li5">姓名</li>
+                <li id="li6">成绩</li>
+                <li id="li7">发布日期</li>
+                <li id="li8">操作</li>
+            </ul>
+        </div>
+        <div class="conten1">
+                    <ul class="ul">
+                        <li id="li1">2014级计应143</li>
+                        <li id="li2">HTML</li>
+                        <li id="li3">余贞侠</li>
+                        <li id="li4">2014051151</li>
+                        <li id="li5">张少龙</li>
+                        <li id="li6">99</li>
+                        <li id="li7">2017-7-2</li>
+                        <li id="li8"> 
+                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
+                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
+                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+                        </li>
+                    </ul>
+                </div>
+        <div class="conten1">
+                    <ul class="ul">
+                        <li id="li1">2014级计应143</li>
+                        <li id="li2">HTML</li>
+                        <li id="li3">余贞侠</li>
+                        <li id="li4">2014051151</li>
+                        <li id="li5">张少龙</li>
+                        <li id="li6">99</li>
+                        <li id="li7">2017-7-2</li>
+                        <li id="li8">
+                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
+                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
+                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+                        </li>
+                    </ul>
+                </div>
+        <div class="conten1">
+                    <ul class="ul">
+                        <li id="li1">2014级计应143</li>
+                        <li id="li2">HTML</li>
+                        <li id="li3">余贞侠</li>
+                        <li id="li4">2014051151</li>
+                        <li id="li5">张少龙</li>
+                        <li id="li6">99</li>
+                        <li id="li7">2017-7-2</li>
+                        <li id="li8">
+                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
+                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
+                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+                        </li>
+                    </ul>
+                </div>
+        <div class="conten1">
+                    <ul class="ul">
+                        <li id="li1">2014级计应143</li>
+                        <li id="li2">HTML</li>
+                        <li id="li3">余贞侠</li>
+                        <li id="li4">2014051151</li>
+                        <li id="li5">张少龙</li>
+                        <li id="li6">0</li>
+                        <li id="li7">2017-7-2</li>
+                        <li id="li8">
+                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
+                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
+                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+                        </li>
+                    </ul>
+                </div>
+        <div class="conten1">
+                    <ul class="ul">
+                        <li id="li1">2014级计应143</li>
+                        <li id="li2">HTML</li>
+                        <li id="li3">余贞侠</li>
+                        <li id="li4">2014051151</li>
+                        <li id="li5">张少龙</li>
+                        <li id="li6">99</li>
+                        <li id="li7">2017-7-2</li>
+                        <li id="li8">
+                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
+                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
+                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+                        </li>
+                    </ul>
+                </div>
+        <div class="conten1">
+                    <ul class="ul">
+                        <li id="li1">2014级计应143</li>
+                        <li id="li2">HTML</li>
+                        <li id="li3">余贞侠</li>
+                        <li id="li4">2014051151</li>
+                        <li id="li5">张少龙</li>
+                        <li id="li6">99</li>
+                        <li id="li7">2017-7-2</li>
+                        <li id="li8">
+                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
+                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
+                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+                        </li>
+                    </ul>
+                </div>
+        <div class="conten1">
+                    <ul class="ul">
+                        <li id="li1">2014级计应143</li>
+                        <li id="li2">HTML</li>
+                        <li id="li3">余贞侠</li>
+                        <li id="li4">2014051151</li>
+                        <li id="li5">张少龙</li>
+                        <li id="li6">99</li>
+                        <li id="li7">2017-7-2</li>
+                        <li id="li8">
+                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
+                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
+                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+                        </li>
+                    </ul>
+                </div>
+            <div class="page">
+                <span>首页</span>
+                <span>上一页</span>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <span>下一页</span>
+                <span>尾页</span>
+            </div>
+        </div>
+        <script type="text/javascript">
+
+        </script>
+</body>
+</html>

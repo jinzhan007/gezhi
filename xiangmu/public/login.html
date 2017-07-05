@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		div{
+			width: 500px;
+			height: 300px;
+			margin: 100px auto;
+			background: #fffd49;
+			padding-top: 20px;
+		}
+		input{
+			display: block;
+			width: 280px;
+			height: 50px;
+			margin: 30px auto;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<input type="text" name="" placeholder="登录您的账号" id="userId">
+	<input type="password" name="" placeholder="登录您的密码" id="password">
+	<input type="button" name="" value="登录" id="login">
+</div>
+<script type="text/javascript">
+    var userName = document.getElementById('userId');
+    var passWord = document.getElementById('password');
+    var login = document.getElementById('login');
+    login.onclick = function(){
+        var arrJson = {
+            userName:userName.value,
+            passWord:passWord.value,
+		}
+		$.ajax({
+            url:'/login',
+            type:'POST',
+            data:arrJson,
+			success:function (data) {
+				if (data.message.code == 100){
+				    console.log(data.message.json);
+                    alert('账号正确')
+					localStorage.setItem("name",data.message.json.userName)
+                    localStorage.setItem("id",data.message.json.userId)
+					localStorage.setItem("age",data.message.json.userAge)
+                    localStorage.setItem("sex",data.message.json.userSex)
+                    localStorage.setItem("mid",data.message.json._id)
+                    window.location = 'html/index.html';
+				}
+				else  if(data.message.code == 102){
+				    alert('账号不存在')
+				}
+                else  if(data.message.code == 103){
+                    alert('密码错误')
+                }
+                else{
+                    alert('未知错误')
+				}
+            },
+			error:function () {
+                alert('严重错误')
+            }
+		})
+       /* if(userName.value == "admin123" && password.value =="123456"){
+            window.location = 'index.html'
+        }
+        else{
+            alert("您输入的账号密码有误")
+        }*/
+    }
+</script>
+</body>
+</html>

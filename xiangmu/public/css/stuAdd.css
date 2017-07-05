@@ -1,0 +1,49 @@
+.subTitle{
+	width: 200px;
+	height: 34px;
+	font-size: 32px;
+	color: #50a074;
+	margin: 15px;
+}
+
+.info,.info1{
+	font-size: 22px;
+	margin-left: 200px;
+}
+
+select{
+	width: 150px;
+}
+
+p{
+	margin:0 0 20px 0;
+}
+
+.info1,.info2{
+	float: left;
+}
+
+.info2{
+	font-size: 22px;
+	margin-left: 50px;
+}
+
+.sexSelect{
+	margin-left: 15px;
+}
+
+.btnSure,.btnCancel{
+	width: 50px;
+	height: 30px;
+	background: #50a074;
+	color:white;
+	margin-top: 10px;
+}
+
+.btnSure{
+	margin-left: 400px;
+}
+
+.btnCancel{
+	margin-left: 50px;
+}

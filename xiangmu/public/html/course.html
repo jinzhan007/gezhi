@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>课程查询</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+        .main{
+            width: 1200px;
+            height: 600px;
+            padding-right: 45px;
+            background-color: white;
+
+
+        }
+        .header{
+            width: 1114px;
+            height: 44px;
+            line-height: 44px;
+            margin-bottom: 11px;
+            background-color: grey;
+        }
+        .nav{
+            float: left;
+            width: 143px;
+            height: 450px;
+            background-color: lightgray;
+            border: 1px solid darkgray;
+            margin-right: 21px;
+        }
+        .nav_sy{
+            width: 141px;
+            height: 38px;
+            background-color: #85cdc9;
+            background-image: url("img/sy.png");
+            background-repeat: no-repeat;
+            margin-left: 1px;
+        }
+        .nav_cj{
+            width: 141px;
+            height: 38px;
+            background-color: white;
+            /*background-image: url("");*/
+            border: 1px solid lightgray;
+        }
+        .nav_kc{
+            width: 141px;
+            height: 38px;
+            background-color: white;
+            /*background-image: url("");*/
+            border: 1px solid lightgray;
+        }
+        .nav_w{
+            position: relative;
+            left: 53px;
+            top: 11px;
+        }
+        .nav_xs{
+            width: 141px;
+            height: 38px;
+            background-color: white;
+            /*background-image: url("");*/
+            border: 1px solid lightgray;
+        }
+        .nav_bj{
+            width: 141px;
+            height: 38px;
+            background-color: white;
+            /*background-image: url("");*/
+            border: 1px solid lightgray;
+        }
+        .search{
+            width: 950px;
+            height: 26px;
+            line-height: 26px;
+            margin-top: 21px;
+            margin-bottom: 19px;
+        }
+        .search_k{
+            float: left;
+            width: 123px;
+            height: 26px;
+            line-height: 26px;
+            margin-right: 10px;
+        }
+        .search_b{
+            float: left;
+            width: 52px;
+            height: 26px;
+            line-height: 26px;
+            margin-left: 10px;
+            margin-right: 46px;
+
+        }
+        .search2{
+            float: left;
+            width: 460px;
+            height: 26px;
+            line-height: 26px;
+            /*margin: auto;*/
+
+        }
+        .list{
+            width: 950px;
+            height: 40px;
+            border: 1px solid #7ecef4;
+        }
+        a:link{
+            text-decoration: none;
+            color: #7a7a7a;
+        }
+        a:visited{
+            color: #7a7a7a;
+        }
+        a:hover{
+            color: mediumpurple;
+            text-decoration: underline;
+        }
+
+        ul{
+            width: 950px;
+            height: 38px;
+        }
+        .nav li{
+            color: #7a7a7a;
+            width: 141px;
+            height: 38px;
+            background-color: white;
+            border: 1px solid lightgray;
+
+        }
+        li{
+            list-style: none;
+            color: black;
+            width: 141px;
+            line-height: 40px;
+            height: 40px;
+            display: inline;
+            float: left;
+            text-align: center;
+        }
+        #li1{
+            width: 145px;
+            color: white;
+            background-color: #0563ad;
+        }
+        #li2{
+           width: 352px;
+            color: white;
+            background-color: #0876c9;
+       }
+        #li3{
+            width:156px;
+            color: white;
+            background-color: #0563ad;
+        }
+        #li4{
+            width: 135px;
+            color: white;
+            background-color: #0876c9;
+        }
+        #li5{
+            width: 162px;
+            color: white;
+            background-color: #0563ad;
+        }
+        #li6{
+            width: 145px;
+        }
+        #li7{
+            width: 352px;
+        }
+        #li8{
+            width: 156px;
+        }
+        #li9{
+            width: 135px;
+        }
+        #li0{
+            width: 161px;
+        }
+        .content1{
+            width: 952px;
+            height: 40px;
+            background-color: #dcdcdc;
+        }
+        .content2{
+            width: 952px;
+            height: 40px;
+            background-color: #eeeeee;
+        }
+        .page{
+            text-align: right;
+            margin-top: 35px;
+            margin-right: 248px;
+        }
+        .page a,.page span{
+            text-decoration: none;
+            border: 1px solid black;
+            padding: 5px 7px;
+            color: #767675;
+        }
+    .page a:hover,.page span:hover{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+<div class="main">
+    <!--<div class="header">
+        <h4  style="color: white;width: 200px;height: 44px;text-align: right">学生成绩管理系统</h4>
+    </div>
+    <div class="nav">
+        <div class="nav_sy">
+             <div class="nav_w" style="color: white"><a href="" style="color: white">首页</a></div>
+         </div>
+        <!--<div class="nav_cj">
+            <div class="nav_w" style="color: #7a7a7a"><a href="">成绩管理</a></div>
+        </div>
+        <div class="nav_kc">
+            <div class="nav_w" style="color: #7a7a7a"><a href="">课程管理</a></div>
+        </div>
+        <div class="nav_xs">
+            <div class="nav_w" style="color: #7a7a7a"><a href="">学生管理</a></div>
+        </div>
+        <div class="nav_bj">
+            <div class="nav_w" style="color: #7a7a7a"><a href="">班级管理</a></div>
+        </div>
+
+        width: 141px;
+           height: 38px;
+           background-color: #85cdc9;
+           background-image: url("img/sy.png");
+           background-repeat: no-repeat;
+           margin-left: 1px;
+        width: 141px;
+           height: 38px;
+           background-color: white;
+           /*background-image: url("");*/
+           border: 1px solid lightgray;
+
+
+
+
+            <li><a href="">成绩管理</li>
+            <li><a href="">课程管理</a></li>
+            <li><a href="">学生管理</a></li>
+            <li><a href=""> 班级管理</a></li>
+
+     </div>-->
+
+    <div class="search">
+        <div class="search_k">
+            <input type="text" name="搜索"  style="width:123px;height:22px" >
+        </div>
+        <div class="search_b">
+            <button value="搜索" style="width: 52px;height: 26px;background-image: url('../img/ss1.png');background-size: 100% 100%"></button>
+        </div>
+        <div class="search2">
+            <h4 style="color: dimgray;line-height: 22px;">教师： <input type="text" name="搜索2" style="width: 123px;height: 22px" >   课程：
+                <input type="text" name="搜索2" style="width: 123px;height: 22px">
+                <button value="搜索2" style="width: 52px;height: 26px;background-image: url('../img/ss1.png');background-size: 100% 100%"></button>
+            </h4>
+        </div>
+    </div>
+    <div class="list">
+       <ul>
+           <li id="li1"><input type="checkbox" name="">课程编号</li>
+           <li id="li2">课程名称</li>
+           <li id="li3">任课教师</li>
+           <li id="li4">上课教室</li>
+           <li id="li5">课程状态
+               <button value="cz" style="background-image: url('../img/cz.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+           </li>
+       </ul>
+    </div>
+
+    <div class="content1">
+        <ul>
+
+            <li id="li6"><input type="checkbox" name="">001</li>
+            <li id="li7">格智</li>
+            <li id="li8">赵老师</li>
+            <li id="li9">6311</li>
+            <li id="li0">授课中
+                <button value="tj1" style="background-image: url('../img/tj1.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="sc" style="background-image: url('../img/sc.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="xg" style="background-image: url('../img/xg.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+            </li>
+        </ul>
+    </div>
+    <div class="content2"></div>
+    <div class="content1"></div>
+    <div class="content2"></div>
+    <div class="content1"></div>
+    <div class="content2"></div>
+    <div class="content1"></div>
+    <div class="content2"></div>
+    <div class="content1"></div>
+    <div class="content2"></div>
+    <div class="page">
+        <a href="#">上一页</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">下一页</a>
+    </div>
+</div>
+</body>
+</html>
