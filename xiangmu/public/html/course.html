@@ -16,7 +16,7 @@
 
 
         }
-        .header{
+       /* .header{
             width: 1114px;
             height: 44px;
             line-height: 44px;
@@ -43,14 +43,14 @@
             width: 141px;
             height: 38px;
             background-color: white;
-            /*background-image: url("");*/
+
             border: 1px solid lightgray;
         }
         .nav_kc{
             width: 141px;
             height: 38px;
             background-color: white;
-            /*background-image: url("");*/
+
             border: 1px solid lightgray;
         }
         .nav_w{
@@ -62,16 +62,16 @@
             width: 141px;
             height: 38px;
             background-color: white;
-            /*background-image: url("");*/
+
             border: 1px solid lightgray;
         }
         .nav_bj{
             width: 141px;
             height: 38px;
             background-color: white;
-            /*background-image: url("");*/
+
             border: 1px solid lightgray;
-        }
+        }*/
         .search{
             width: 950px;
             height: 26px;
@@ -100,7 +100,6 @@
             width: 460px;
             height: 26px;
             line-height: 26px;
-            /*margin: auto;*/
 
         }
         .list{
@@ -143,12 +142,12 @@
             text-align: center;
         }
         #li1{
-            width: 145px;
+            width: 100px;
             color: white;
             background-color: #0563ad;
         }
         #li2{
-           width: 352px;
+           width: 302px;
             color: white;
             background-color: #0876c9;
        }
@@ -163,24 +162,40 @@
             background-color: #0876c9;
         }
         #li5{
-            width: 162px;
+            width: 81px;
             color: white;
             background-color: #0563ad;
         }
         #li6{
-            width: 145px;
+            width: 81px;
+            color: white;
+            background-color: #0876c9;
         }
         #li7{
-            width: 352px;
+            width: 95px;
+            color: white;
+            background-color: #0563ad;
         }
-        #li8{
+        #classID{
+            width: 100px;
+        }
+        #className{
+            width: 302px;
+        }
+        #classTeacher{
             width: 156px;
         }
-        #li9{
+        #classRoom{
             width: 135px;
         }
-        #li0{
-            width: 161px;
+        #classperiod{
+            width: 81px;
+        }
+        #classcredit{
+            width: 80px;
+        }
+        #caozuo{
+            width: 95px;
         }
         .content1{
             width: 952px;
@@ -259,21 +274,23 @@
         <div class="search_b">
             <button value="搜索" style="width: 52px;height: 26px;background-image: url('../img/ss1.png');background-size: 100% 100%"></button>
         </div>
-        <div class="search2">
+        <!--<div class="search2">
             <h4 style="color: dimgray;line-height: 22px;">教师： <input type="text" name="搜索2" style="width: 123px;height: 22px" >   课程：
                 <input type="text" name="搜索2" style="width: 123px;height: 22px">
                 <button value="搜索2" style="width: 52px;height: 26px;background-image: url('../img/ss1.png');background-size: 100% 100%"></button>
             </h4>
-        </div>
+        </div>-->
     </div>
     <div class="list">
        <ul>
-           <li id="li1"><input type="checkbox" name="">课程编号</li>
+           <li id="li1">课程编号</li>
            <li id="li2">课程名称</li>
            <li id="li3">任课教师</li>
            <li id="li4">上课教室</li>
-           <li id="li5">课程状态
-               <button value="cz" style="background-image: url('../img/cz.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+           <li id="li5">课程学分</li>
+           <li id="li6">课程学时</li>
+           <li id="li7">操作
+               <!--<button value="cz" style="background-image: url('../img/cz.png');width: 20px;height: 19px;background-size: 100% 100%"></button>-->
            </li>
        </ul>
     </div>
@@ -281,26 +298,137 @@
     <div class="content1">
         <ul>
 
-            <li id="li6"><input type="checkbox" name="">001</li>
-            <li id="li7">格智</li>
-            <li id="li8">赵老师</li>
-            <li id="li9">6311</li>
-            <li id="li0">授课中
+            <li id="classID">001</li>
+            <li id="className">格智</li>
+            <li id="classTeacher">赵老师</li>
+            <li id="classRoom">6311</li>
+            <li id="classperiod">120小时</li>
+            <li id="classcredit">4</li>
+            <li id="caozuo">
+                <button value="tj1" style="background-image: url('../img/tj.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="sc" style="background-image: url('../img/sc.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="xg" style="background-image: url('../img/xg.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+            </li>
+        </ul>
+    </div>
+    <div class="content2">
+        <ul>
+
+            <li id="classID">001</li>
+            <li id="className">格智</li>
+            <li id="classTeacher">赵老师</li>
+            <li id="classRoom">6311</li>
+            <li id="classperiod">120小时</li>
+            <li id="classcredit">4</li>
+            <li id="caozuo">
                 <button value="tj1" style="background-image: url('../img/tj1.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
                 <button value="sc" style="background-image: url('../img/sc.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
                 <button value="xg" style="background-image: url('../img/xg.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
             </li>
         </ul>
     </div>
-    <div class="content2"></div>
-    <div class="content1"></div>
-    <div class="content2"></div>
-    <div class="content1"></div>
-    <div class="content2"></div>
-    <div class="content1"></div>
-    <div class="content2"></div>
-    <div class="content1"></div>
-    <div class="content2"></div>
+    <div class="content1">
+        <ul>
+
+            <li id="classID">001</li>
+            <li id="className">格智</li>
+            <li id="classTeacher">赵老师</li>
+            <li id="classRoom">6311</li>
+            <li id="classperiod">120小时</li>
+            <li id="classcredit">4</li>
+            <li id="caozuo">
+                <button value="tj1" style="background-image: url('../img/tj1.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="sc" style="background-image: url('../img/sc.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="xg" style="background-image: url('../img/xg.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+            </li>
+        </ul>
+    </div>
+    <div class="content2">
+        <ul>
+
+            <li id="classID">001</li>
+            <li id="className">格智</li>
+            <li id="classTeacher">赵老师</li>
+            <li id="classRoom">6311</li>
+            <li id="classperiod">120小时</li>
+            <li id="classcredit">4</li>
+            <li id="caozuo">
+                <button value="tj1" style="background-image: url('../img/tj1.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="sc" style="background-image: url('../img/sc.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="xg" style="background-image: url('../img/xg.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+            </li>
+        </ul>
+    </div>
+    <div class="content1">
+        <ul>
+
+            <li id="classID">001</li>
+            <li id="className">格智</li>
+            <li id="classTeacher">赵老师</li>
+            <li id="classRoom">6311</li>
+            <li id="classperiod">120小时</li>
+            <li id="classcredit">4</li>
+            <li id="caozuo">
+                <button value="tj1" style="background-image: url('../img/tj1.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="sc" style="background-image: url('../img/sc.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="xg" style="background-image: url('../img/xg.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+            </li>
+        </ul>
+    </div>
+    <div class="content2">
+        <ul>
+
+            <li id="classID">001</li>
+            <li id="className">格智</li>
+            <li id="classTeacher">赵老师</li>
+            <li id="classRoom">6311</li>
+            <li id="classperiod">120小时</li>
+            <li id="classcredit">4</li>
+            <li id="caozuo">
+                <button value="tj1" style="background-image: url('../img/tj1.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="sc" style="background-image: url('../img/sc.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="xg" style="background-image: url('../img/xg.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+            </li>
+        </ul>
+    </div>
+    <div class="content1">
+        <ul>
+
+            <li id="classID">001</li>
+            <li id="className">格智</li>
+            <li id="classTeacher">赵老师</li>
+            <li id="classRoom">6311</li>
+            <li id="classperiod">120小时</li>
+            <li id="classcredit">4</li>
+            <li id="caozuo">
+                <button value="tj1" style="background-image: url('../img/tj1.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="sc" style="background-image: url('../img/sc.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="xg" style="background-image: url('../img/xg.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+            </li>
+        </ul>
+    </div>
+    <div class="content2">
+        <ul>
+
+            <li id="classID">001</li>
+            <li id="className">格智</li>
+            <li id="classTeacher">赵老师</li>
+            <li id="classRoom">6311</li>
+            <li id="classperiod">120小时</li>
+            <li id="classcredit">4</li>
+            <li id="caozuo">
+                <button value="tj1" style="background-image: url('../img/tj1.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="sc" style="background-image: url('../img/sc.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+                <button value="xg" style="background-image: url('../img/xg.png');width: 20px;height: 19px;background-size: 100% 100%"></button>
+            </li>
+        </ul>
+    </div>
+    <div class="content1">
+        
+    </div>
+    <div class="content2">
+    
+    </div>
     <div class="page">
         <a href="#">上一页</a>
         <a href="#">1</a>

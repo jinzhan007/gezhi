@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>学生成绩管理系统</title>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <style type="text/css">
         *{
             margin: 0;
@@ -44,59 +45,7 @@
             height: 50px;
             background-color: #78c5c1;
         }
-        .tubiao1{
-            width: 45px;
-            height: 41px;
-            float: left;
-            border: 1px solid #DCDBDE;
-            background-image: url("img/shouye.png");
-            background-repeat: no-repeat;
-            background-position: 16px,20px;
-        }
-        .tubiao2{
-            width: 45px;
-            height: 41px;
-            float: left;
-            border: 1px solid #DCDBDE;
-        }
-        .tubiao3{
-            width: 45px;
-            height: 41px;
-            float: left;
-            border: 1px solid #DCDBDE;
-        }
-        .tubiao4{
-            width: 45px;
-            height: 41px;
-            float: left;
-            border: 1px solid #DCDBDE;
-        }
-        .tubiao5{
-            width: 45px;
-            height: 41px;
-            float: left;
-            border: 1px solid #DCDBDE;
-        }
-        .wenzi{
-            width: 94px;
-            height: 41px;
-            line-height: 41px;
-            float: left;
-            font-family: 微软雅黑;
-            font-size: 18px;
-            color: white;
-            border: 1px solid #DCDBDE;
-        }
-        .wenzi1{
-            width: 94px;
-            height: 41px;
-            line-height: 41px;
-            float: left;
-            font-family: 微软雅黑;
-            font-size: 18px;
-            color: white;
-            border: 1px solid #DCDBDE;
-        }
+        
         #content{
             width: 960px;
             height: 449px;
@@ -150,7 +99,7 @@
         }
         .conten1{
             width: 958px;
-            height: 38px;
+            height: 300px;
             margin-bottom: 1px;
             background-color: white;
             border: solid darkgray;
@@ -158,6 +107,8 @@
             border-top: 0.5px;
             border-bottom: 0.5px;
             border-right: 1px;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
         ul{
             width: 960px;
@@ -171,80 +122,25 @@
              text-align: center;
              line-height: 38px;
              margin-right:5px;
+             width: 155px;
+            float: left;
+            display: inline;
          }
         *{
             margin: 0;
             padding: 0;
             /*文档当中 所有的元素都会执行*/
         }
-        #li1{
-            width: 140px;
-            height: 38px;
-            line-height: 38px;
-            float: left;
-            display: inline;
-        }
-        #li2{
-            width: 180px;
-            height: 38px;
-            line-height: 38px;
-            float:left;
-            display: inline;
-        }
-        #li3{
-            width: 120px;
-            height: 38px;
-            float: left;
-            display: inline;
-        }
-        #li4{
-            width: 110px;
-            height: 38px;
-            float: left;
-            display: inline;
-        }
-        #li5{
-            width: 70px;
-            height: 38px;
-            float: left;
-            display: inline;
-        }
-        #li6{
-            width: 70px;
-            height: 38px;
-            float: left;
-            display: inline;
-        }
-        #li7{
-            width: 100px;
-            height: 38px;
-            float: left;
-            display: inline;
-        }
-        #li8{
-            width: 130px;
-            height: 38px;
-            line-height: 38px;
-            float: left;
-            display: inline;
-        }
         #btn1{
-            width: 30px;
+            width: 45px;
             height: 30px;
-            margin-top: 3px;
             line-height: 30px;
             background-size: 100% 100%;
         }
-        #btn2{
-            width: 30px;
-            height: 30px;
-            margin-top: 3px;
-            background-size: 100% 100%;
-        }
+        
         #btn3{
-            width: 30px;
+            width: 45px;
             height: 30px;
-            margin-top: 3px;
             background-size: 100% 100%;
         }
         .page{
@@ -262,6 +158,42 @@
         }
         .page a:hover,.page span:hover{
             color: rgba(37, 136, 139, 0.2);  }
+        #tanchuceng{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: fixed;
+            background: #DCDBDE;
+            top: 50%;
+            left:50%;
+            text-align: center;
+            margin: -250px 0 0 -250px;
+            display: none;
+        }
+        #tanchuceng a{
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            background-color: gainsboro;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+        }
+        #tuichu{
+            cursor: pointer;
+        }
+        #tanchuceng input{
+            height: 30px;
+            outline: none;
+            border: none;
+            margin-top: 15px;
+        }
+
 
         /*交集选择器中的  子元素选择器
 		ul>li{
@@ -295,129 +227,31 @@
         </div>
         <div class="daohang2">
             <ul class="ul">
-                <li id="li1">班级</li>
-                <li id="li2">课程</li>
-                <li id="li3">任课老师</li>
-                <li id="li4">学号</li>
-                <li id="li5">姓名</li>
-                <li id="li6">成绩</li>
-                <li id="li7">发布日期</li>
-                <li id="li8">操作</li>
+                <li >班级</li>
+                <li >课程</li>
+                <li >学号</li>
+                <li >姓名</li>
+                <li >成绩</li>
+                <li >操作</li>
             </ul>
         </div>
-        <div class="conten1">
-                    <ul class="ul">
-                        <li id="li1">2014级计应143</li>
-                        <li id="li2">HTML</li>
-                        <li id="li3">余贞侠</li>
-                        <li id="li4">2014051151</li>
-                        <li id="li5">张少龙</li>
-                        <li id="li6">99</li>
-                        <li id="li7">2017-7-2</li>
-                        <li id="li8"> 
-                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
-                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
-                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+        <div class="conten1" id="conten1">
+                  <ul >
+                        <li >2014级计应143</li>
+                        <li >HTML</li>
+                        <li >2014051151</li>
+                        <li >张少龙</li>
+                        <li >99</li>
+                        <li >
+                           
                         </li>
-                    </ul>
-                </div>
-        <div class="conten1">
-                    <ul class="ul">
-                        <li id="li1">2014级计应143</li>
-                        <li id="li2">HTML</li>
-                        <li id="li3">余贞侠</li>
-                        <li id="li4">2014051151</li>
-                        <li id="li5">张少龙</li>
-                        <li id="li6">99</li>
-                        <li id="li7">2017-7-2</li>
-                        <li id="li8">
-                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
-                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
-                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
-                        </li>
-                    </ul>
-                </div>
-        <div class="conten1">
-                    <ul class="ul">
-                        <li id="li1">2014级计应143</li>
-                        <li id="li2">HTML</li>
-                        <li id="li3">余贞侠</li>
-                        <li id="li4">2014051151</li>
-                        <li id="li5">张少龙</li>
-                        <li id="li6">99</li>
-                        <li id="li7">2017-7-2</li>
-                        <li id="li8">
-                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
-                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
-                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
-                        </li>
-                    </ul>
-                </div>
-        <div class="conten1">
-                    <ul class="ul">
-                        <li id="li1">2014级计应143</li>
-                        <li id="li2">HTML</li>
-                        <li id="li3">余贞侠</li>
-                        <li id="li4">2014051151</li>
-                        <li id="li5">张少龙</li>
-                        <li id="li6">0</li>
-                        <li id="li7">2017-7-2</li>
-                        <li id="li8">
-                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
-                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
-                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
-                        </li>
-                    </ul>
-                </div>
-        <div class="conten1">
-                    <ul class="ul">
-                        <li id="li1">2014级计应143</li>
-                        <li id="li2">HTML</li>
-                        <li id="li3">余贞侠</li>
-                        <li id="li4">2014051151</li>
-                        <li id="li5">张少龙</li>
-                        <li id="li6">99</li>
-                        <li id="li7">2017-7-2</li>
-                        <li id="li8">
-                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
-                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
-                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
-                        </li>
-                    </ul>
-                </div>
-        <div class="conten1">
-                    <ul class="ul">
-                        <li id="li1">2014级计应143</li>
-                        <li id="li2">HTML</li>
-                        <li id="li3">余贞侠</li>
-                        <li id="li4">2014051151</li>
-                        <li id="li5">张少龙</li>
-                        <li id="li6">99</li>
-                        <li id="li7">2017-7-2</li>
-                        <li id="li8">
-                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
-                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
-                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
-                        </li>
-                    </ul>
-                </div>
-        <div class="conten1">
-                    <ul class="ul">
-                        <li id="li1">2014级计应143</li>
-                        <li id="li2">HTML</li>
-                        <li id="li3">余贞侠</li>
-                        <li id="li4">2014051151</li>
-                        <li id="li5">张少龙</li>
-                        <li id="li6">99</li>
-                        <li id="li7">2017-7-2</li>
-                        <li id="li8">
-                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
-                            <button id="btn2" value="删除" ><img src="../img/delete.png"></button>
-                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
-                        </li>
-                    </ul>
-                </div>
+                    </ul>  
+        </div>
+            
             <div class="page">
+            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
+                          
+                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
                 <span>首页</span>
                 <span>上一页</span>
                 <a href="#">1</a>
@@ -430,8 +264,89 @@
                 <span>尾页</span>
             </div>
         </div>
+        <div id="tanchuceng">
+            <a href="javascript:;" id="non">×</a>
+            班级:<input type="text" name="" id="StuClass" style="border: none;outline: none;"><br>
+            课程:<input type="text" name="" id="StuKC"><br>
+            学号:<input type="text" name="" id="StuXH"><br>
+            姓名:<input type="text" name="" id="StuName"><br>
+            成绩:<input type="text" name="" id="StuScore"><br>
+            <button in="button" value="添加" style="font-size: 16px ;width: 100px" id="add">添加</button>
+        </div>
         <script type="text/javascript">
+            var btn=document.getElementById('btn3');
+            var conten1 = document.getElementById('conten1')
+            btn.onclick = function(){
+                tanchuceng.style.display = 'block'
+            }
+            var non=document.getElementById('non');
+            non.onclick=function(){
+                tanchuceng.style.display="none"
+            }
+            var add = document.getElementById('add');
+            add.onclick = function(){
+                console.log(1)
+                var arr={
+                    StuClass:StuClass.value,
+                    StuKC:StuKC.value,
+                    StuXH:StuXH.value,
+                    StuName:StuName.value,
+                    StuScore:StuScore.value
+                }
+                var str = "";
+                $.ajax({
+                    url:'/addStud',
+                    type:'POST',
+                    data:arr,
+                    success:function (data){ 
+                        //var arr = data.message;
+                        /*
+                        <ul class="ul">
+                        <li >2014级计应143</li>
+                        <li >HTML</li>
+                        <li >2014051151</li>
+                        <li >张少龙</li>
+                        <li >99</li>
+                        <li >
+                            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
+                          
+                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+                        </li>
+                    </ul>
+                        */
+                       find()
+                        tanchuceng.style.display = 'none'
+                    },error:function(){
 
+                    }
+        
+                })
+            }
+            function find(){
+                var str ='';
+                $.ajax({
+                    url:'/findStud',
+                    type:'POST',
+                    data:{},
+                    success:function (data){
+                        console.log(1)
+                       var arr = data.message;
+                       for(var i = 0;i<arr.length;i++){
+                            str += "<ul ><li >"+arr[i].StuClass+"</li><li >"+arr[i].StuKC+"</li><li >"+arr[i].StuXH+"</li><li >"+arr[i].StuName+"</li><li >"+arr[i].StuScore+"</li><li ><button  value='修改' onclick='funUpdate(\""+arr[i]._id+"\")' ><img src='../img/xg.png'></button><button  value='删除' onclick='funRemove(\""+arr[i]._id+"\")'><img src='../img/add.png'></button></li></ul>"
+                        }
+                        conten1.innerHTML = str;
+
+                    },
+                    error:function(){
+
+                    }
+                })
+            }
+            find()
+            function funRemove(str){
+                alert(str);
+                var id=req.body.id;
+            }
         </script>
 </body>
 </html>

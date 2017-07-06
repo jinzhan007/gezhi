@@ -7,80 +7,15 @@
         .main{
             width: 1200px;
             height: 600px;
-            padding-left: 41px;
             padding-right: 45px;
             background-color: white;
 
 
         }
-        .header{
-            width: 1114px;
-            height: 44px;
-            line-height: 44px;
-            margin-bottom: 11px;
-            background-color: grey;
-        }
-        .nav{
-            float: left;
-            width: 143px;
-            height: 450px;
-            background-color: lightgray;
-            border: 1px solid darkgray;
-            margin-right: 21px;
-        }
-        .nav_sy{
-            width: 141px;
-            height: 38px;
-            background-color: #85cdc9;
-            background-image: url("img/sy.png");
-            background-repeat: no-repeat;
-            margin-left: 1px;
-        }
-        .nav_xx{
-            width: 141px;
-            height: 38px;
-            background-color: white;
-            /*background-image: url("");*/
-            border: 1px solid lightgray;
-        }
-        .nav_cj{
-            width: 141px;
-            height: 38px;
-            background-color: white;
-            /*background-image: url("");*/
-            border: 1px solid lightgray;
-        }
-        .nav_kc{
-            width: 141px;
-            height: 38px;
-            background-color: white;
-            /*background-image: url("");*/
-            border: 1px solid lightgray;
-        }
-        .nav_w{
-            position: relative;
-            left: 53px;
-            top: 11px;
-        }
-        .nav_xs{
-            width: 141px;
-            height: 38px;
-            background-color: white;
-            /*background-image: url("");*/
-            border: 1px solid lightgray;
-        }
-        .nav_bj{
-            width: 141px;
-            height: 38px;
-            background-color: white;
-            /*background-image: url("");*/
-            border: 1px solid lightgray;
-        }
         .search{
             width: 950px;
             height: 26px;
             line-height: 26px;
-            margin-left: 165px;
             margin-top: 21px;
             margin-bottom: 19px;
         }
@@ -112,7 +47,6 @@
             width: 950px;
             height: 40px;
             border: 1px solid #7ecef4;
-            margin-left: 165px;
         }
         a:link{
             text-decoration: none;
@@ -143,55 +77,69 @@
             text-align: center;
         }
         #li1{
-            width: 145px;
+            width: 100px;
             color: white;
             background-color: #0563ad;
         }
         #li2{
-           width: 352px;
+            width: 302px;
             color: white;
             background-color: #0876c9;
-       }
+        }
         #li3{
             width:156px;
             color: white;
             background-color: #0563ad;
         }
         #li4{
-            width: 165px;
+            width: 135px;
             color: white;
             background-color: #0876c9;
         }
         #li5{
-            width: 132px;
+            width: 81px;
             color: white;
             background-color: #0563ad;
         }
         #li6{
-            width: 145px;
+            width: 81px;
+            color: white;
+            background-color: #0876c9;
         }
         #li7{
-            width: 352px;
+            width: 95px;
+            color: white;
+            background-color: #0563ad;
         }
-        #li8{
+        #classID{
+            width: 100px;
+        }
+        #className{
+            width: 302px;
+        }
+        #classTeacher{
             width: 156px;
         }
-        #li9{
-            width: 165px;
+        #classRoom{
+            width: 135px;
         }
-        #li0{
-            width: 131px;
+        #classperiod{
+            width: 81px;
+        }
+        #classcredit{
+            width: 80px;
+        }
+        #caozuo{
+            width: 95px;
         }
         .content1{
             width: 952px;
             height: 40px;
-            margin-left: 165px;
             background-color: #dcdcdc;
         }
         .content2{
             width: 952px;
             height: 40px;
-            margin-left: 165px;
             background-color: #eeeeee;
         }
         .page{
@@ -243,31 +191,37 @@
         <div class="search_b">
             <button value="搜索" style="width: 52px;height: 26px;background-image: url('img/ss.png');background-size: 100% 100%"></button>
         </div>
-        <div class="search2">
+        <!--<div class="search2">
         <h4 style="color: dimgray;line-height: 22px;float: left">教师： <input type="text" name="搜索2" style="width: 123px;height: 22px" >   课程：
         <input type="text" name="搜索2" style="width: 123px;height: 22px">
         <button value="搜索2" style="width: 52px;height: 26px;background-image: url('img/ss.png');background-size: 100% 100%"></button>
         </h4>
-        </div>
+        </div>-->
     </div>
     <div class="list">
-       <ul>
-           <li id="li1">课程编号</li>
-           <li id="li2">课程名称</li>
-           <li id="li3">任课教师</li>
-           <li id="li4">上课教室</li>
-           <li id="li5">课程状态</li>
-           <!--教师登陆修改行-->
-       </ul>
+        <ul>
+            <li id="li1">课程编号</li>
+            <li id="li2">课程名称</li>
+            <li id="li3">任课教师</li>
+            <li id="li4">上课教室</li>
+            <li id="li5">课程学分</li>
+            <li id="li6">课程学时</li>
+            <li id="li7">课程状态
+                <!--<button value="cz" style="background-image: url('../img/cz.png');width: 20px;height: 19px;background-size: 100% 100%"></button>-->
+            </li>
+        </ul>
     </div>
 
     <div class="content1">
         <ul>
-            <li id="li6">001</li>
-            <li id="li7">格智</li>
-            <li id="li8">赵老师</li>
-            <li id="li9">6311</li>
-            <li id="li0">正常授课中...</li>
+
+            <li id="classID">001</li>
+            <li id="className">格智</li>
+            <li id="classTeacher">赵老师</li>
+            <li id="classRoom">6311</li>
+            <li id="classperiod">120小时</li>
+            <li id="classcredit">4</li>
+            <li id="caozuo">授课中</li>
         </ul>
     </div>
     <div class="content2"></div>
