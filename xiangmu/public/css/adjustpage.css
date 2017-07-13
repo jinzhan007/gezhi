@@ -1,0 +1,234 @@
+.headline{
+	background-color: #606d78;
+	width: 1127px;
+	height: 44px;
+	margin-left: 37px
+}
+
+.all{
+	width: 1200px;
+    height: 600px;
+    margin-left: 38px;
+    background-color:white;
+}
+
+.leftMenu{
+	width: 143px;
+	height: 450px;
+	float: left;
+	margin-left: 37px;
+	margin-top: 11px;
+	background-color: #efefee;
+}
+
+.scoretext{
+	width: 100px;
+	height: 35px;
+    float: left;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    color: black;
+    background-color: #ffffff;
+    margin-top: 31px;
+}
+
+.adjusttext{
+	width: 100px;
+	height: 35px;
+    float: left;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    background-color: #85cdc9;
+    margin-top: 2px;
+}
+
+.iconScore{
+	float: left;
+	width: 39px;
+	height: 35px;
+	background-color: #f3f3f3;
+	margin-top: 31px;
+	margin-left: 2px;
+	text-align: center;
+	line-height: 35px;
+}
+
+.iconScore img{
+	width: 13px;
+	height: 13px;
+}
+
+.iconAdjust img{
+	width: 13px;
+	height: 13px;
+}
+
+.iconAdjust{
+	float: left;
+	width: 39px;
+	height: 35px;
+	background-color: #78c5c1;
+	margin-top: 2px;
+	margin-left: 2px;
+	text-align: center;
+	line-height: 35px;
+}
+
+.peopleIcon{
+	width: 67px;
+	height: 67px;
+	/*float: left;*/
+	margin: 0 auto;
+	margin-top: 19px;
+	text-align: center;
+	background-color: #ffffff;
+}
+
+.main{
+	width: 959px;
+	height: 450px;
+	float: left;
+	margin-top: 11px;
+	margin-left: 25px;
+	background-color: #efefee;
+}
+
+.peopleIconB{
+	width: 117px;
+	height: 117px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	margin-top: 23px;
+	text-align: center;
+	padding-bottom: 2px;
+	color: #a5a5a2;
+}
+
+.peopleIcon img{
+	width: 51px;
+	height: 57px;
+	margin-top: 4px;
+}
+
+.peopleIconB img{
+	width: 108px;
+	height: 91px;
+	margin-top: 16px;
+}
+
+.InfoFlag{
+	float: left;
+}
+
+.InfoFlag div{
+	width: 70px;
+	height: 32px;
+	margin-left: 27px;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	text-align: center;
+	color: #504e4e;
+}
+
+.name{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.id,.grade,.class{
+	background-color: #d9dedb;
+}
+
+.info{
+	float: left;
+}
+
+.nameT{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.idT,.gradeT,.classT{
+	background-color: #d9dedb;
+}
+
+.info div{
+	width: 380px;
+	height: 32px;
+	list-style: none;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	color: #504e4e;
+}
+
+.InfoFlag2{
+	float: left;
+}
+
+.InfoFlag2 div{
+	width: 100px;
+	height: 32px;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	color: #504e4e;
+}
+
+.email{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.repasw,.none2,.none4{
+	background-color: #d9dedb;
+}
+
+.info2{
+	float: left;
+}
+
+.emailT{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.repaswT,.none2T,.none4T{
+	background-color: #d9dedb;
+}
+
+.info2 div{
+	width: 350px;
+	height: 32px;
+	list-style: none;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	color: #504e4e;
+}
+
+.button{
+	width: 218px;
+	height: 31px;
+	margin:0 auto;
+	margin-top: 257px;
+}
+
+.button div{
+	float: left;
+	width: 85px;
+	height: 31px;
+	background-color: #9ebdad;
+	text-align: center;
+	line-height: 31px;
+	color: #464644;
+	font-family: 微软雅黑;
+}
+
+.cancle{
+	margin-left: 48px;
+}
+
+

@@ -2,33 +2,65 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>login</title>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<style type="text/css">
-		div{
-			width: 500px;
-			height: 300px;
-			margin: 100px auto;
-			background: #fffd49;
-			padding-top: 20px;
-		}
-		input{
-			display: block;
-			width: 280px;
-			height: 50px;
-			margin: 30px auto;
-		}
+	<script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.spinner.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	</style>
+	    <style type="text/css">
+        #a {
+            background: url(img/bg.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .form {
+            background: rgba(255, 255, 255, 0.2);
+            width: 400px;
+            margin-top: 100px;
+            margin-right: 300px;
+            margin-bottom: auto;
+            margin-left: auto;
+        }
+        .fa {
+            display: inline-block;
+            top: 10px;
+            left: 6px;
+            position: absolute;
+            color: #ccc;
+            }
+    </style>
 </head>
-<body>
-<div>
-	<input type="text" name="" placeholder="请输入账号" id="userId">
-	<input type="password" name="" placeholder="请输入密码" id="password">
-	<input type="button" name="" value="登录" id="login">
+<body id="a">
+<div class="container">
+    <div class="form row">
+        <form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="register_form">
+            <div class="col-sm-9 col-md-9">
+                <div class="form-group">
+                    <i class="fa fa-user fa-lg"></i>
+                    <input type="text" name="" placeholder="请输入账号" id="userId" class="form-control  required">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="" placeholder="请输入密码" id="password" class="form-control  required">
+                </div>
+                <div class="form-group">
+                    <input type="button" name="" value="管理员" id="login" class="btn btn-success pull-right">
+                    <input type="button" name="" value="学生" id="login1" class="btn btn-success pull-right">
+                    <input type="reset" name="Submit" value="重置" class="btn btn-success pull-right">
+                </div>
+
+            </div>
+        </form>
+    </div> 
 </div>
+
 <script type="text/javascript">
     var userName = document.getElementById('userId');
     var passWord = document.getElementById('password');
+    var login1 = document.getElementById('login1');
     var login = document.getElementById('login');
     login.onclick = function(){
         var arrJson = {
@@ -64,13 +96,50 @@
                 alert('严重错误')
             }
 		})
+    }
+      login1.onclick = function(){
+        var arrJson = {
+            userName:userName.value,
+            passWord:passWord.value,
+        }
+        $.ajax({
+            url:'/login',
+            type:'POST',
+            data:arrJson,
+            success:function (data) {
+                if (data.message.code == 100){
+                    console.log(data.message.json);
+                    alert('账号正确')
+                    localStorage.setItem("name",data.message.json.userName)
+                    localStorage.setItem("id",data.message.json.userId)
+                    localStorage.setItem("age",data.message.json.userAge)
+                    localStorage.setItem("sex",data.message.json.userSex)
+                    localStorage.setItem("mid",data.message.json._id)
+                    window.location = 'html/studentLogin.html';
+                }
+                else  if(data.message.code == 102){
+                    alert('账号不存在')
+                }
+                else  if(data.message.code == 103){
+                    alert('密码错误')
+                }
+                else{
+                    alert('未知错误')
+                }
+            },
+            error:function () {
+                alert('严重错误')
+            }
+        })
+    }
+
        /* if(userName.value == "admin123" && password.value =="123456"){
             window.location = 'index.html'
         }
         else{
             alert("您输入的账号密码有误")
         }*/
-    }
+    
 </script>
 </body>
 </html>

@@ -1,0 +1,336 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.main{
+	width: 959px;
+	height: 450px;
+	float: left;
+	margin-top: 11px;
+	margin-left: 25px;
+	background-color: #efefee;
+}
+
+.InfoFlag{
+	float: left;
+}
+
+.InfoFlag div{
+	width: 70px;
+	height: 32px;
+	margin-left: 27px;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	text-align: center;
+	color: #504e4e;
+}
+
+
+
+.name{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.id,.grade,.class{
+	background-color: #d9dedb;
+}
+
+.info{
+	float: left;
+}
+
+.nameT{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.idT,.gradeT,.classT{
+	background-color: #d9dedb;
+}
+
+.info div{
+	width: 380px;
+	height: 32px;
+	list-style: none;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	color: #504e4e;
+}
+
+.InfoFlag2{
+	float: left;
+}
+
+.InfoFlag2 div{
+	width: 100px;
+	height: 32px;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	color: #504e4e;
+}
+
+.email{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.repasw,.none2,.none4{
+	background-color: #d9dedb;
+}
+
+.info2{
+	float: left;
+}
+
+.emailT{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.repaswT,.none2T,.none4T{
+	background-color: #d9dedb;
+}
+
+.info2 div{
+	width: 350px;
+	height: 32px;
+	list-style: none;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	color: #504e4e;
+}
+
+.function{
+	width: 912px;
+	height: 28px;
+	margin-top: 27px;
+	margin-left: 26px;
+	overflow: hidden;
+}
+
+.function img{
+	float: left;
+	width: 30px;
+	height: 28px;
+}
+
+#search{
+	width: 50px;
+	height: 28px;
+	float: left;
+	background-color: #509490;
+	font-family: 微软雅黑;
+	font-size: 18px;
+	border: none;
+	color: white;
+}
+
+.gettext input{
+	border: none;
+	height: 28px;
+}
+
+.gettext{
+	float: left;
+	width: 153px;
+	height: 28px;
+}
+
+.choose{
+	width: 50px;
+	float: left;
+	font-size: 14px;
+	font-family: 微软雅黑;
+	line-height: 28px;
+	padding-left: 40px;
+}
+
+.chooseGrade{
+	width: 120px;
+	float: left;
+	line-height: 28px;
+}
+
+.chooseGrade select{
+	width: 120px;
+	border: none;
+	color: #aeaaaa;
+	text-align: center;
+}
+
+.choose2{
+	width: 80px;
+	float: left;
+	margin-left: 10px;
+	line-height: 28px;
+}
+
+.choose2 select{
+	width: 80px;
+	border: none;
+	color: #aeaaaa;
+	text-align: center;
+}
+
+.order{
+	width: 50px;
+	float: left;
+	font-size: 14px;
+	font-family: 微软雅黑;
+	line-height: 28px;
+	padding-left: 40px;
+}
+
+.ordertime{
+	width: 102px;
+	float: left;
+	line-height: 28px;
+}
+
+.ordertime select{
+	width: 102px;
+	border: none;
+	color: #aeaaaa;
+}
+
+.orderscore{
+	width: 78px;
+	float: left;
+	margin-left: 10px;
+	line-height: 28px;
+}
+
+.orderscore select{
+	width: 78px;
+	border: none;
+	color: #aeaaaa;
+}
+
+.course{
+	float: left;
+	list-style: none;
+	width: 169px;
+	margin-top: 30px;
+	color: #363333;
+	font-size: 16px;
+	font-family: 微软雅黑;
+	padding-left: 26px;
+	text-align: center;
+}
+
+.course li{
+	line-height: 32px;
+	height: 32px;
+}
+
+.li1{
+	background-color: #9ebdad;
+}
+
+.li3,.li5,.li7,.li9{
+	background-color: #d9dedb;
+}
+
+.teacher{
+	float: left;
+	list-style: none;
+	width: 110px;
+	margin-top: 30px;
+	color: #363333;
+	font-size: 16px;
+	font-family: 微软雅黑;
+	text-align: center;
+	padding:0 0 0 0;
+}
+
+.teacher li{
+	line-height: 32px;
+	height: 32px;
+}
+
+.t1{
+	background-color: #9ebdad;
+}
+
+.t3,.t5,.t7,.t9{
+	background-color: #d9dedb;
+}
+
+.credit,.period{
+	float: left;
+	list-style: none;
+	width: 50px;
+	margin-top: 30px;
+	color: #363333;
+	font-size: 16px;
+	font-family: 微软雅黑;
+	text-align: center;
+	padding:0 0 0 0;
+}
+
+.credit li,.period li{
+	line-height: 32px;
+	height: 32px;
+}
+
+.c1,.p1{
+	background-color: #9ebdad;
+}
+
+.c3,.c5,.c7,.c9,.p3,.p5,.p7,.p9{
+	background-color: #d9dedb;
+}
+
+.behavior,.result,.average,.classli{
+	float: left;
+	list-style: none;
+	width: 76px;
+	margin-top: 30px;
+	color: #363333;
+	font-size: 16px;
+	font-family: 微软雅黑;
+	text-align: center;
+	padding:0 0 0 0;
+}
+
+.behavior li,.result li,.average li,.classli li{
+	line-height: 32px;
+	height: 32px;
+}
+
+.b1,.r1,.a1,.cl1{
+	background-color: #9ebdad;
+}
+
+.b3,.b5,.b7,.b9,.a3,.a5,.a7,.a9,.r3,.r5,.r7,.r9,.cl3,.cl5,.cl7,.cl9{
+	background-color: #d9dedb;
+}
+
+.timeli{
+	float: left;
+	list-style: none;
+	width: 200px;
+	margin-top: 30px;
+	color: #363333;
+	font-size: 16px;
+	font-family: 微软雅黑;
+	text-align: center;
+	padding:0 0 0 0;
+}
+
+.timeli li{
+	line-height: 32px;
+	height: 32px;
+}
+
+.ti1{
+	background-color: #9ebdad;
+}
+
+.ti3,.ti5,.ti7,.ti9{
+	background-color: #d9dedb;
+}
+
+
+

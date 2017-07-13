@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
 	<link rel="stylesheet" type="text/css" href="../css/xg.css">
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -52,110 +53,53 @@
 			</div>
 
 			<div class="xg" id="revise">
-				<a href="javascript:;" id="guan">x</a>
+				<a href="javascript:;" id="guan">X</a>
 				<p>学院：</p><input type="text" name="" id=""></input>
-				<p>学院：</p><input type="text" name="" id=""></input>
-				<p>学院：</p><input type="text" name="" id=""></input>
-				<p>学院：</p><input type="text" name="" id=""></input>
-
+				<p>专业：</p><input type="text" name="" id=""></input>
+				<p>年级：</p><input type="text" name="" id=""></input>
+				<p>班级：</p><input type="text" name="" id=""></input>
+				<p></p><input type="button" id="sure" value="确认" style="margin-top: 50px;margin-left: -120px;"></input>
 			</div>
 			
-			
+			<div class="tj" id="add">
+				<a href="javascript:;" id="guan1">X</a>
+				<p>学院：</p><input type="text" name="" id="StuXY"></input>
+				<p>专业：</p><input type="text" name="" id="StuZY"></input>
+				<p>年级：</p><input type="text" name="" id="StuNJ"></input>
+				<p>班级：</p><input type="text" name="" id="StuClass"></input>
+				<p></p><input type="button" id="sure1" value="确认" style="margin-top: 50px;margin-left: -120px;"></input>
+			</div>
+
 			<div class="data">
 				<ul class="th">
-					<li class="checkbox1"><input type="checkbox">全选</input></li>
+					
 					<li>学院</li>
 					<li>专业</li>
 					<li>年级</li>
 					<li>班级</li>
 					<li>操作</li>
 				</ul>
-				<ul>
-					<li class="checkbox2"><input type="checkbox"></input></li>
-					<li>计算机学院</li>
-					<li>计算机科学</li>
-					<li>大二</li>
-					<li>1班</li>
-					<li>
-						<a href=""><img src="../img/delete.png" /></a>
-						<a href="javascript:;" id="xg"><img src="../img/xg.png" /></a>
-						<a href="detail.html"><img src="../img/f.png" /></a>
-					</li>
-				</ul>
-				<ul style="background-color: ">
-					<li class="checkbox2"><input type="checkbox"></input></li>
-					<li>计算机学院</li>
-					<li>计算机科学</li>
-					<li>大二</li>
-					<li>2班</li>
-					<li>
-						<a href=""><img src="../img/delete.png" /></a>
-						<a href="" id="xg"><img src="../img/xg.png" /></a>
-						<a href="detail.html"><img src="../img/f.png" /></a>
-					</li>
-				</ul>
-				<ul>
-					<li class="checkbox2"><input type="checkbox"></input></li>
-					<li>大气学院</li>
-					<li>气象</li>
-					<li>大一</li>
-					<li>1班</li>
-					<li>
-						<a href=""><img src="../img/delete.png" /></a>
-						<a href="" id="xg"><img src="../img/xg.png" /></a>
-						<a href="detail.html"><img src="../img/f.png" /></a>
-					</li>
-				</ul>
-				<ul style="background-color: ">
-					<li class="checkbox2"><input type="checkbox"></input></li>
-					<li>物流学院</li>
-					<li>物流</li>
-					<li>大二</li>
-					<li>1班</li>
-					<li>
-						<a href=""><img src="../img/delete.png" /></a>
-						<a href="" id="xg"><img src="../img/xg.png" /></a>
-						<a href="detail.html"><img src="../img/f.png" /></a>
-					</li>
-				</ul>
-				<ul>
-					<li class="checkbox2"><input type="checkbox"></input></li>
-					<li>外国语学院</li>
-					<li>外语</li>
-					<li>大三</li>
-					<li>1班</li>
-					<li>
-						<a href=""><img src="../img/delete.png" /></a>
-						<a href="" id="xg"><img src="../img/xg.png" /></a>
-						<a href="detail.html"><img src="../img/f.png" /></a>
-					</li>
-				</ul>	
-				<ul style="background-color: ">
-					<li class="checkbox2"><input type="checkbox"></input></li>
-					<li>通信工程学院</li>
-					<li>通信工程</li>
-					<li>大二</li>
-					<li>2班</li>
-					<li>
-						<a href=""><img src="../img/delete.png" /></a>
-						<a href=""><img src="../img/xg.png" /></a>
-						<a href="detail.html"><img src="../img/f.png" /></a>
-					</li>
-				</ul>
-				<ul>
-					<li class="checkbox2"><input type="checkbox"></input></li>
-					<li>外国语学院</li>
-					<li>外语</li>
-					<li>大三</li>
-					<li>1班</li>
-					<li>
-						<a href=""><img src="../img/delete.png" /></a>
-						<a href=""><img src="../img/xg.png" /></a>
-						<a href="detail.html"><img src="../img/f.png" /></a>
-					</li>
-				</ul>
+
+				<div class="nei" id="nei">
+					<ul>
+						
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li>
+							<a href=""><img src="../img/delete.png" /></a>
+							<a href="javascript:;" id="xg"><img src="../img/xg.png" /></a>
+							<a href="detail.html"><img src="../img/f.png" /></a>
+						</li>
+					</ul>
+				</div>
+				
+				
+				
+	
 					<div class="add">
-						<a href=""><img src="../img/add.png"></a>&nbsp;&nbsp;
+						<a href="javascript:;" id="tj"><img src="../img/add.png"></a>&nbsp;&nbsp;
 						<a href=""><img src="../img/det.png"></a>
 					</div>
 			</div>
@@ -171,6 +115,88 @@
 				x.onclick = function(){
 					revise.style.display = "none";
 				}
+
+				var add = document.getElementById('add');
+				var tj = document.getElementById('tj');
+				var x1 = document.getElementById('guan1');
+				tj.onclick = function(){
+					add.style.display = "block";
+				}
+				x1.onclick = function(){
+					add.style.display = "none";
+				}
+
+
+				
+           
+           
+            var sure1 = document.getElementById('sure1');
+            var nei = document.getElementById('nei');
+            sure1.onclick = function(){
+                console.log(1);
+                var arr={
+                    StuXY:StuXY.value,
+                    StuZY:StuZY.value,
+                    StuNJ:StuNJ.value,
+                    StuClass:StuClass.value,
+                    
+                }
+                var str = "";
+                $.ajax({
+                    url:'/addStud',
+                    type:'POST',
+                    data:arr,
+                    success:function (data){ 
+                        
+                       find()
+                        add.style.display = 'none'
+                    },error:function(){
+
+                    }
+        
+                })
+            }
+            function find(){
+                var str ='';
+                $.ajax({
+                    url:'/findStud',
+                    type:'POST',
+                    data:{},
+                    success:function (data){
+                        console.log(1)
+                       var arr = data.message;
+                       for(var i = 0;i<arr.length;i++){
+                            str += "<ul ><li >"+arr[i].StuXY+"</li><li >"+arr[i].StuZY+"</li><li >"+arr[i].StuNJ+"</li><li >"+arr[i].StuClass+"</li><li ><button  value='修改' onclick='funUpdate(\""+arr[i]._id+"\")' ><img src='../img/xg.png'></button><button  value='删除' onclick='funRemove(\""+arr[i]._id+"\")'><img src='../img/delete.png'></button><a href='detail.html'><img src='../img/f.png'></a></li></ul>"
+                        }
+                        nei.innerHTML = str;
+
+                    },
+                    error:function(){
+
+                    }
+                })
+            }
+
+           
+             function funRemove(str){
+               
+                var id=str;
+
+                $.ajax({
+                    url:'/rem',
+                    type:'POST',
+                    data:{id:id},
+                    success:function(data){
+                        console.log(data)
+                        alert('删除成功');
+                        find();
+                    },
+                    error:function(){
+
+                    }
+                })
+            }
+            find();
 			</script>
 			<div class="fenye">
 				<a href=""><</a>

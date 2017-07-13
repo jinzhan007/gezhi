@@ -1,3 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 
 .search{
 	width: 900px;
@@ -7,7 +11,7 @@
 }
 .data{
 	width: 900px;
-	height: 340px;
+	
 	margin: 10px auto;
 	border: 1px solid #d9dedb;
 }
@@ -67,15 +71,9 @@
 	width: 145px;
 	color: black;
 	float: left;
-	margin: 6px 0 0 0px;	
+	margin: 6px 0 0 30px;	
 }
-.data ul .checkbox1{
-	margin-left: 20px;
-}
-.data ul .checkbox2{
-	width: 125px;
-	margin-left: 40px;
-}
+
 
 .data .th{
 	background-color: #49b97d;
@@ -85,6 +83,7 @@
 	color: white;
 }
 .add{
+	margin-bottom: 0;
 	margin: 25px 0 0 40px;
 }
 .fenye{
@@ -112,10 +111,33 @@
 
 }
 
-.xg{
+.tj, .xg{
 	width: 300px;
-	height: 300px;
+	height: 210px;
+	margin-left: 320px;
+	margin-top: 70px;
 	position: fixed;
-	border: 1px solid red;
+	border: 1px solid blue;
+	background: white;
 	display: none;
+}
+.tj p, .tj input, .xg p, .xg input{
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom:0;
+}
+.tj a, .xg a{
+	margin: 0 0 0 40px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	border-radius: 50%;
+	line-height: 20px;
+	text-align: center;
+	text-decoration: none;
 }

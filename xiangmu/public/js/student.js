@@ -116,28 +116,3 @@ exports.update = function(req,res){
     }
     return;
 }
-
-exports.updateStu = function(req,res){
-    var id = req.body.id;
-    var arr = [{StuXH:req.body.StuXH},{StuName:req.body.StuName},{StuSex:req.body.StuSex},
-        {StuTel:req.body.StuTel},{StuZY:req.body.StuZY},{StuNJ:req.body.StuNJ},{StuClass:req.body.StuClass},{}]
-    var i = 0;
-    while(i<arr.length){
-        (function(a){
-            UserStu.findByIdAndUpdate(id,arr[a],function(err,result){
-                if (err) {
-                    console.log(err)
-                }
-                else {
-                    if(a == arr.length-1){
-                        res.json({
-                            message:result
-                        })
-                    }
-                }
-            })
-        })(i)
-        i++;
-    }
-    return;
-}

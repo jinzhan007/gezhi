@@ -1,4 +1,4 @@
-﻿var express = require("express");//载入一个express 框架
+var express = require("express");//载入一个express 框架
 var bodyParser = require("body-parser");//载入body-parser 这个用于解析路由过程 响应 请求JSON格式的数据
 var User = require("./routes/userdb.js");//载入一个我们写好的本地的mongoose
 var UserStu = require('./routes/student.js');
@@ -16,12 +16,15 @@ app.post('/login',User.login);
 app.post('/updateInfo',User.updateInfo);
 
 
-//第二章表的接口
+//第二张表的接口
 app.post('/addStud',UserStu.addStud)
 //app.post('/updateInStud',UserStu.updateInStud)
 //app.post('/updataStuClass',UserStu.updataStuClass)
 app.post('/findStud',UserStu.findStud)
 app.post('/findFenye',UserStu.findFenye)
+app.post('/rem',UserStu.rem)
+app.post('/update',UserStu.update)
+app.post('/updateStu',UserStu.updateStu)
 //端口号
 app.listen(3000);
 console.log("服务器启动成功");//入口文件

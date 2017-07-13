@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>小傻子</title>
+	<link rel="stylesheet" type="text/css" href="../css/studentLoin.css">
+</head>
+<body>
+	<div class="all">
+	<div class="headline">学生信息管理系统</div>
+	<div id="leftMenu">
+		<div class="peopleIcon">
+			<img src="../img/people.jpg">
+		</div>
+		<div class="iconScore">
+			<img id="imgScore" src="../img/grade.PNG">
+			<button id="scoretext" style="cursor: pointer;" onclick="scoreclick()">个人成绩</button>
+		</div>
+		<div class="iconAdjust">
+			<img id="imgAdjust" src="../img/adjust.PNG">
+			<button id="adjusttext" style="cursor: pointer;" onclick="adjustclick()">编辑资料</button>
+		</div>
+		<div id="cancle">
+			<img id="cancleImg" style="cursor: pointer;" src="../img/cancle.PNG" onclick="cancleclick()">
+			<div id="cancleText">退出</div>
+		</div>
+	</div>
+	<iframe id="info" src="studentLoginInfo.html" scrolling="no"></iframe>
+	<div class="footer">
+		Copyright © 2017 Student performance management system. All rights reserved.
+	</div>
+	<script type="text/javascript">
+		var adjusttext = document.getElementById('adjusttext');
+		var scoretext = document.getElementById('scoretext');
+		var imgScore = document.getElementById('imgScore');
+		var imgAdjust = document.getElementById('imgAdjust');
+		var frame = document.getElementById('info');
+		var photo = localStorage.getItem('');
+		function adjustclick(){
+			adjusttext.style.background = '#85cdc9';
+			adjusttext.style.color = '#ffffff';
+			scoretext.style.background = '#ffffff';
+			scoretext.style.color = '#000000';
+			imgScore.src = "../img/grade2.PNG";
+			imgAdjust.src = "../img/adjust2.PNG"
+			frame.src = "studentAlterInfo.html";
+		}
+
+		function scoreclick(){
+			scoretext.style.background = '#85cdc9';
+			scoretext.style.color = '#ffffff';
+			adjusttext.style.background = '#ffffff';
+			adjusttext.style.color = '#000000';
+			imgScore.src = "../img/grade.PNG";
+			imgAdjust.src = "../img/adjust.PNG"
+			frame.src = "studentLoginInfo.html";
+		}
+
+		function cancleclick(){
+			localStorage.clear();
+            window.location = '../login.html';
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+.headline{
+	background-color: #606d78;
+	width: 1127px;
+	height: 44px;
+	text-align: center;
+	line-height: 44px;
+	margin-left: 37px;
+	border-radius: 10px;
+	color: #ffffff;
+}
+
+.all{
+	width: 1200px;
+    height: 600px;
+    margin-left: 38px;
+    background-color:white;
+}
+
+#leftMenu{
+	width: 143px;
+	height: 450px;
+	float: left;
+	margin-left: 37px;
+	margin-top: 11px;
+	background-color: #efefee;
+}
+
+#scoretext{
+	float: left;
+	width: 100px;
+	height: 35px;
+    float: left;
+    border: none;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    background-color: #85cdc9;
+}
+
+#adjusttext{
+	width: 100px;
+	height: 35px;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    line-height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: none;
+    color: black;
+    background-color: #ffffff;
+}
+
+.iconScore{
+	float: left;
+	width: 139px;
+	height: 35px;
+	background-color: #78c5c1;
+	margin-top: 31px;
+	margin-left: 2px;
+	text-align: center;
+	line-height: 35px;
+}
+
+#imgScore{
+	float: left;
+	width: 39px;
+	height: 35px;
+}
+
+#imgAdjust{
+	float: left;
+	width: 39px;
+	height: 35px;
+}
+
+.iconAdjust{
+	float: left;
+	width: 139px;
+	height: 35px;
+	background-color: #f3f3f3;
+	margin-top: 2px;
+	margin-left: 2px;
+	text-align: center;
+	line-height: 35px;
+}
+
+.peopleIcon{
+	margin: 0 auto;
+	margin-top: 19px;
+	text-align: center;
+}
+
+.peopleIcon img{
+	width: 73px;
+	height: 67px;
+}
+
+#cancle{
+	float: left;
+	margin-top: 210px;
+	margin-left: 61px;
+}
+
+#cancleText{
+	font-family: 微软雅黑;
+    font-size: 6px;
+    text-align: center;
+    color: #100a0a;
+}
+
+#cancleImg{
+	margin-bottom: 3px;
+	float: left;
+	width: 21px;
+	height: 23px;
+}
+
+#info{
+	width: 1000px;
+	height: 460px;
+	float: left;
+	border: none;
+}
+
+.footer{
+	float: left;
+	width: 1127px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin-left: 37px;
+	margin-top: 7px;
+	background: #606d78;
+	border-radius: 10px;
+	color: #ffffff;
+}

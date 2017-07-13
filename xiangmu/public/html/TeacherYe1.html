@@ -145,7 +145,7 @@
         }
         .page{
             text-align: center;
-            margin-top: 10px;
+            margin-top: 30px;
             margin-right: 5px;
             float: right;
         }
@@ -188,6 +188,41 @@
             cursor: pointer;
         }
         #tanchuceng input{
+            height: 30px;
+            outline: none;
+            border: none;
+            margin-top: 15px;
+        }
+        #tanchuceng1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: fixed;
+            background: #DCDBDE;
+            top: 50%;
+            left:50%;
+            text-align: center;
+            margin: -250px 0 0 -250px;
+            display: none;
+        }
+        #tanchuceng1 a{
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            background-color: gainsboro;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+        }
+        #tuichu1{
+            cursor: pointer;
+        }
+        #tanchuceng1 input{
             height: 30px;
             outline: none;
             border: none;
@@ -249,9 +284,7 @@
         </div>
             
             <div class="page">
-            <button id="btn1" value="修改" ><img src="../img/xg.png"></button>
-                          
-                            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
+            <button id="btn3" value="添加" ><img src="../img/add.png"></button>
                 <span>首页</span>
                 <span>上一页</span>
                 <a href="#">1</a>
@@ -273,7 +306,18 @@
             成绩:<input type="text" name="" id="StuScore"><br>
             <button in="button" value="添加" style="font-size: 16px ;width: 100px" id="add">添加</button>
         </div>
-        <script type="text/javascript">
+        <div id="tanchuceng1">
+            <a href="javascript:;" id="non1">×</a>
+            班级:<input type="text" name="" id="StuClass1" style="border: none;outline: none;"><br>
+            课程:<input type="text" name="" id="StuKC1"><br>
+            学号:<input type="text" name="" id="StuXH1"><br>
+            姓名:<input type="text" name="" id="StuName1"><br>
+            成绩:<input type="text" name="" id="StuScore1"><br>
+            <button in="button" value="修改" style="font-size: 16px ;width: 100px" id="update">修改</button>
+        </div>
+
+
+    <script type="text/javascript">
             var btn=document.getElementById('btn3');
             var conten1 = document.getElementById('conten1')
             btn.onclick = function(){
@@ -285,7 +329,6 @@
             }
             var add = document.getElementById('add');
             add.onclick = function(){
-                console.log(1)
                 var arr={
                     StuClass:StuClass.value,
                     StuKC:StuKC.value,
@@ -329,10 +372,9 @@
                     type:'POST',
                     data:{},
                     success:function (data){
-                        console.log(1)
                        var arr = data.message;
                        for(var i = 0;i<arr.length;i++){
-                            str += "<ul ><li >"+arr[i].StuClass+"</li><li >"+arr[i].StuKC+"</li><li >"+arr[i].StuXH+"</li><li >"+arr[i].StuName+"</li><li >"+arr[i].StuScore+"</li><li ><button  value='修改' onclick='funUpdate(\""+arr[i]._id+"\")' ><img src='../img/xg.png'></button><button  value='删除' onclick='funRemove(\""+arr[i]._id+"\")'><img src='../img/add.png'></button></li></ul>"
+                            str += "<ul ><li >"+arr[i].StuClass+"</li><li >"+arr[i].StuKC+"</li><li >"+arr[i].StuXH+"</li><li >"+arr[i].StuName+"</li><li >"+arr[i].StuScore+"</li><li ><button  value='修改' onclick='funUpdate(\""+arr[i]._id+"\")' ><img src='../img/xg.png'></button><button  value='删除' onclick='funRemove(\""+arr[i]._id+"\")'><img src='../img/delete.png'></button></li></ul>"
                         }
                         conten1.innerHTML = str;
 
@@ -342,11 +384,78 @@
                     }
                 })
             }
-            find()
-            function funRemove(str){
-                alert(str);
-                var id=req.body.id;
+            function funUpdate(str){
+                var id = localStorage.getItem('str');
+                var StuClass1 = document.getElementById('StuClass1');
+                var StuKC1 = document.getElementById('StuKC1');
+                var StuXH1= document.getElementById('StuXH1');
+                var StuName1 = document.getElementById('StuName1');
+                var StuScore1 = document.getElementById('StuScore1');
+
+                StuClass1.value = localStorage.getItem('StuClass1');
+                StuKC1.value = localStorage.getItem('StuKC1');
+                StuXH1.value = localStorage.getItem('StuXH1');
+                StuName1.value = localStorage.getItem('StuName1');
+                StuScore1.value = localStorage.getItem('StuScore1');
+
+                tanchuceng1.style.display = 'block';
+
+                var non1=document.getElementById('non1');
+                non1.onclick=function(){
+                    tanchuceng1.style.display="none"
+                }
+                var update = document.getElementById('update');
+                update.onclick=function(value){
+                    var id = str
+                    var arrJson = {
+                        id:id,
+                        StuClass:StuClass1.value,
+                        StuKC:StuKC1.value,
+                        StuXH:StuXH1.value,
+                        StuName:StuName1.value,
+                        StuScore:StuScore1.value
+                    }
+                    $.ajax({
+                        url:'/update',
+                        type:'POST',
+                        data:arrJson,
+                        success:function (data) {
+                            localStorage.setItem('StuClass1',data.message.StuClass);
+                            localStorage.setItem('StuKC1',data.message.StuKC);
+                            localStorage.setItem('StuXH1',data.message.StuXH);
+                            localStorage.setItem('StuName1',data.message.StuName);
+                            localStorage.setItem('StuScore1',data.message.StuScore);
+                            /*StuClass1.innerHTML = localStorage.getItem(' StuClass1');
+                            StuKC1.innerHTML = localStorage.getItem('StuKC1');
+                            StuXH1.innerHTML = localStorage.getItem('StuXH1');
+                            StuName1.innerHTML = localStorage.getItem('StuName1');
+                            StuScore1.innerHTML = localStorage.getItem('StuScore1');*/
+                            alert('修改成功')
+                            find()
+                        }
+                    })
+                }
+
             }
+            function funRemove(str){
+        //        alert(1)
+                var id=str;
+
+                $.ajax({
+                    url:'/rem',
+                    type:'POST',
+                    data:{id:id},
+                    success:function(data){
+                        console.log(data)
+                        alert('删除成功');
+                        find();
+                    },
+                    error:function(){
+
+                    }
+                })
+            }
+            find();
         </script>
 </body>
 </html>

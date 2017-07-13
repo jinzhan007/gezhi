@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.main{
+	width: 959px;
+	height: 450px;
+	float: left;
+	margin-top: 11px;
+	margin-left: 25px;
+	background-color: #efefee;
+}
+
+.peopleIconB{
+	/*width: 117px;
+	height: 117px;*/
+	background-color: #efefee;
+	margin: 0 auto;
+	margin-top: 23px;
+	text-align: center;
+	padding-bottom: 2px;
+}
+
+.peopleIconB img{
+	width: 130px;
+	height: 117px;
+}
+
+.InfoFlag{
+	float: left;
+}
+
+.InfoFlag div{
+	width: 70px;
+	height: 32px;
+	margin-left: 27px;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	text-align: center;
+	color: #504e4e;
+}
+
+.name{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.id,.grade,.class{
+	background-color: #d9dedb;
+}
+
+.info{
+	float: left;
+}
+
+.nameT{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.idT,.gradeT,.classT{
+	background-color: #d9dedb;
+}
+
+.info div{
+	width: 380px;
+	height: 32px;
+	list-style: none;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	color: #504e4e;
+}
+
+.InfoFlag2{
+	float: left;
+}
+
+.InfoFlag2 div{
+	width: 100px;
+	height: 32px;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	color: #504e4e;
+}
+
+.email{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.repasw,.none2,.none4{
+	background-color: #d9dedb;
+}
+
+.info2{
+	float: left;
+}
+
+.emailT{
+	margin-top: 16px;
+	background-color: #d9dedb;
+}
+
+.repaswT,.none2T,.none4T{
+	background-color: #d9dedb;
+}
+
+.info2 div{
+	width: 350px;
+	height: 32px;
+	list-style: none;
+	font-family: 微软雅黑;
+	line-height: 32px;
+	color: #504e4e;
+}
+
+.button{
+	width: 218px;
+	height: 31px;
+	margin:0 auto;
+	margin-top: 257px;
+}
+
+.button button{
+	float: left;
+	width: 85px;
+	height: 31px;
+	background-color: #9ebdad;
+	text-align: center;
+	line-height: 31px;
+	color: #464644;
+	font-family: 微软雅黑;
+	border: none;
+}
+
+#cancle{
+	margin-left: 30px;
+}
+
+

@@ -90,12 +90,17 @@
 	color: white;
 	margin-left: 70px;
 }
-.entry .checkAll{
-	margin-left: 0px;
+
+.tableHeader .entry{
+	font-size: 12px;
+	color: white;
+	
 }
 
 .entry{
 	float: left;
+	width: 120px;
+	text-align: center;
 }
 
 .tableHeader li{
@@ -103,8 +108,7 @@
 }
 
 .btnOption,.btnOptionAll{
-	float: right;
-
+	float: left;
 	margin-top: 7px;
 }
 
@@ -162,4 +166,31 @@
 	color:white;
 	margin-top: 10px;
 	margin-left: 20px;
+}
+
+#stuAdd{
+	width: 300px;
+	height: 300px;
+	border: 1px solid #509490;
+	position: fixed;
+	background: white;
+	top: 50%;
+	left:50%;
+	margin: -250px 0 0 -250px;
+	text-align: center;
+	display: none;
+}
+
+#stuAdd a{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	line-height: 20px;
+	background: #50a074;
+	text-align: center;
+	text-decoration: none;
 }
